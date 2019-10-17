@@ -4,27 +4,31 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+//import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * Desription:
  *
  * @ClassName DemoApplication
  * @Author Zhanyuwei
- * @Date 2019/10/13 17:03
+ * @Date 2019/10/16 23:26
  * @Version 1.0
  **/
-
 @SpringBootApplication
 @RestController
+//@EnableSwagger2
 public class DemoApplication {
 
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class,args);
+        SpringApplication.run(DemoApplication.class, args);
     }
 
     @GetMapping("/hello")
-    public String hello(){
-
+    public String hello() {
         return "hello spring security";
     }
+
 }
